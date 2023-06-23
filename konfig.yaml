@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=https://unpkg.com/konfig-lib@latest/konfig-yaml.schema.json
+
+outputDirectory: /tmp/flyio-sdks-out
+specRemotePath: https://machines-api-spec.fly.dev/swagger/doc.json
+specInputPath: doc.json
+specPath: doc-fixed.json
+generators:
+  python:
+    version: 1.0.0
+    packageName: flyio_client
+    projectName: flyio-python-sdk
+    outputDirectory: python
+    clientName: Flyio
+    git:
+      userId: konfig-dev
+      repoId: flyio-sdks/tree/main/python
+  typescript:
+    version: 1.0.0
+    npmName: flyio-typescript-sdk
+    outputDirectory: typescript
+    clientName: Flyio
+    git:
+      userId: konfig-dev
+      repoId: flyio-sdks/tree/main/typescript
